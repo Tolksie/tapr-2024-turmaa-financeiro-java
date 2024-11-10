@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-MicroservfinanceiroApplication<microservfinanceiro>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.univille.microservfinanceiro.MicroservfinanceiroApplication",
+            "projectName": "microservfinanceiro",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": ["-Djavax.net.ssl.trustStore=/workspaces/tapr-2024-turmaa-financeiro-java/native.jks",
+                       "-Djavax.net.ssl.trustStorePassword=univille"]
+
+        }
+    ]
+}
