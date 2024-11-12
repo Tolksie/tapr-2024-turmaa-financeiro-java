@@ -1,4 +1,4 @@
-package br.univille.microservfinanceiro.cobranca.controller;
+package br.univille.microservfinanceiro.desconto.controller;
 
 import java.util.List;
 
@@ -11,25 +11,25 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.univille.microservfinanceiro.cobranca.entity.Boleto;
-import br.univille.microservfinanceiro.cobranca.service.BoletoService;
+import br.univille.microservfinanceiro.desconto.entity.Desconto;
+import br.univille.microservfinanceiro.desconto.service.DescontoService;
 
 @RestController
-@RequestMapping("/api/v1/boletos")
-public class BoletoAPIController {
+@RequestMapping("/api/v1/descontos")
+public class DescontoAPIController {
 
     @Autowired
-    private BoletoService service;
+    private DescontoService service;
 
     @GetMapping
-    public ResponseEntity<List<Boleto>> get(){
-        var listaBoletos = service.getAll();
+    public ResponseEntity<List<Desconto>> get(){
+        var listaDescontos = service.getAll();
 
-        return new ResponseEntity<List<Boleto>>(listaBoletos, HttpStatus.OK);
+        return new ResponseEntity<List<Desconto>>(listaDescontos, HttpStatus.OK);
     }
 
     @PostMapping
-    public ResponseEntity<Boleto> post(@RequestBody Boleto boleto){
+    public ResponseEntity<Desconto> post(@RequestBody Desconto desc){
         if (boleto == null){
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }

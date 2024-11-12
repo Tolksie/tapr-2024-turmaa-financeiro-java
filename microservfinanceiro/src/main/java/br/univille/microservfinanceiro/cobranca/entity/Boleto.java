@@ -11,19 +11,19 @@ public class Boleto {
     @PartitionKey
     @GeneratedValue
     private String boletoId;
-    private String boletoNome;
+    private String nome;
     
     public String getBoletoId() {
         return boletoId;
     }
-    public void setBoletoId(String boletoId) {
-        this.boletoId = boletoId;
+    public void setBoletoId(String id) {
+        this.boletoId = id;
     }
     public String getBoletoNome() {
-        return boletoNome;
+        return Nome;
     }
-    public void setBoletoNome(String boletoNome) {
-        this.boletoNome = boletoNome;
+    public void setBoletoNome(String nome) {
+        this.Nome = nome;
     }
 
 }

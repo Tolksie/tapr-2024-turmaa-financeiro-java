@@ -10,20 +10,20 @@ public class Desconto {
     @Id
     @PartitionKey
     @GeneratedValue
-    private String Id;
-    private String Nome;
+    private String id;
+    private String nome;
 
     public String getId() {
-        return Id;
+        return id;
     }
     public void setId(String id) {
-        Id = id;
+        this.id = id;
     }
     public String getNome() {
-        return Nome;
+        return nome;
     }
     public void setNome(String nome) {
-        Nome = nome;
+        this.nome = nome;
     }
 
     

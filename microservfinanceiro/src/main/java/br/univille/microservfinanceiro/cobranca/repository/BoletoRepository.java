@@ -7,6 +7,6 @@ import br.univille.microservfinanceiro.cobranca.entity.Boleto;
 
 @Repository
 public interface BoletoRepository
-extends CrudRepository<Boleto,String> {
-    
+        extends CrudRepository<Boleto, String> {
+
 }
