@@ -30,4 +30,27 @@ public class BoletoServiceImpl implements BoletoService{
         return repository.save(boleto);
     }
 
+    @Override
+    public Boleto update(String id, Boleto boleto) {
+        var buscaBoleto = repository.findById(id);
+        if(buscaBoleto.isPresent()){
+            var boletoAntigo = buscaBoleto.get();
+            //atualizo os atributos
+            boletoAntigo.setBoletoNome(id);
+            repository.save(boletoAntigo);
+            return boletoAntigo;
+        }
+        return null;
+    }
+
+    @Override
+    public Boleto delete(String id) {
+        var buscaBoleto = repository.findById(id);
+        if(buscaBoleto.isPresent()){
+            var boletoAntigo = buscaBoleto.get();
+            repository.delete(boletoAntigo);
+            return boletoAntigo;
+    }
+    return null;
+    }
 }

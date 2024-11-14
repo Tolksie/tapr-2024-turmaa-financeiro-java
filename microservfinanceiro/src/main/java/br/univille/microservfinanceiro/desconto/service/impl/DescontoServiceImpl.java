@@ -29,5 +29,28 @@ public class DescontoServiceImpl implements DescontoService{
     public Desconto save(Desconto desconto) {
         return repository.save(desconto);
     }
+
+    @Override
+    public Desconto update(String id, Desconto desconto) {
+        var buscaDesconto = repository.findById(id);
+        if(buscaDesconto.isPresent()){
+            var descontoAntigo = buscaDesconto.get();
+            //atualizo os atributos
+            descontoAntigo.setNome(id);
+            repository.save(descontoAntigo);
+            return descontoAntigo;
+        }
+        return null;
+    }
+    @Override
+    public Desconto delete(String id) {
+        var buscaDesconto = repository.findById(id);
+        if(buscaDesconto.isPresent()){
+            var descontoAntigo = buscaDesconto.get();
+            repository.delete(descontoAntigo);
+            return descontoAntigo;
+    }
+    return null;
+}
     
 }

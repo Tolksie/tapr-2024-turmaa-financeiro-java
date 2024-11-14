@@ -20,10 +20,10 @@ public class Boleto {
         this.boletoId = id;
     }
     public String getBoletoNome() {
-        return Nome;
+        return nome;
     }
     public void setBoletoNome(String nome) {
-        this.Nome = nome;
+        this.nome = nome;
     }
 
 }
