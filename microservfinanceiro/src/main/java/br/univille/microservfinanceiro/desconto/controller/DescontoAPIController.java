@@ -40,7 +40,7 @@ public class DescontoAPIController {
         return new ResponseEntity<Desconto>(descontoSalvo, HttpStatus.OK);
     }
 
-    @PutMapping("{/id}")
+    @PutMapping("/{id}")
     public ResponseEntity<Desconto> put(
             @PathVariable("id") String id,
             @RequestBody Desconto desconto) {
@@ -54,7 +54,7 @@ public class DescontoAPIController {
         return new ResponseEntity<Desconto>(desconto, HttpStatus.OK);
     }
 
-    @DeleteMapping("{/id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Desconto> delete(
             @PathVariable("id") String id) {
         if (id == "" || id == null) {

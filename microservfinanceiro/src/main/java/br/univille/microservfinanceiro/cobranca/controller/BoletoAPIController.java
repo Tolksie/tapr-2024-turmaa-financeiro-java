@@ -41,7 +41,7 @@ public class BoletoAPIController {
         return new ResponseEntity<Boleto>(boletoSalvo, HttpStatus.OK);
     } 
 
-    @PutMapping("{/id}")
+    @PutMapping("/{id}")
     public ResponseEntity<Boleto> put(
         @PathVariable("id") String id,
         @RequestBody Boleto boleto){
@@ -55,7 +55,7 @@ public class BoletoAPIController {
             return new ResponseEntity<Boleto>(boleto,HttpStatus.OK);
         }
 
-    @DeleteMapping("{/id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Boleto> delete(
             @PathVariable("id") String id) {
         if (id == "" || id == null) {
